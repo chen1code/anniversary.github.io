@@ -243,6 +243,9 @@ img{
 .bg-mask12{
 	background: url(../img/cat_bg12.jpeg) top center no-repeat;
 }
+.ques-out{
+	display: none;
+}
 .game-list{
 	margin: 40px;
 }
