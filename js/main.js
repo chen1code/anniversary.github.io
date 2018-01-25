@@ -137,16 +137,17 @@
 	//game
 	$(".bg-mask1").click(function(){
 		$(this).animate({top:"-200"},2000);
+		$(".ques-out").show();		
 		//$(this).slideUp()
 	})
 	var count_error = 0;
 	$(".btn_confirm").click(function(){	
-		event.stopPropagation();
-		var index = $(this).parent().parent().index() + 1;
+		event.stopPropagation();		
+		var index = $(this).parent().parent().parent().index() + 1;
 		var check_value = $(".answer-choice input:radio[name='answer"+ index + "']:checked").val();
 		if(count_error<3){
 			if(check_value == "true"){
-			$(this).parent().parent().next("li").find(".bg-mask").animate({top:"-200"},2000);
+			$(this).parent().parent().parent().next("li").find(".bg-mask").animate({top:"-200"},2000);
 			$(this).hide().siblings("button").hide();
 			$(this).siblings(".right_result").show();
 		}else{
