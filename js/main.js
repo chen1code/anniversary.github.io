@@ -20,14 +20,7 @@
 		});
 	});
 
-	var ds = document.getElementById('ds');
-	var dm = document.getElementById('dm');
-	var rr = document.getElementById('rr');
-	var st = document.getElementById('st');
-	var dw = document.getElementById('dw');
-	var num = 0;
-	var pmh = ds.offsetHeight;
-	var pmw = ds.offsetWidth;
+	
 
 	function mu(dm_value,dm_size,dm_color)
 	{
@@ -111,7 +104,7 @@
 	$(".date-text input").click(function(){
 		$(".date-text input").removeClass("wrong_active");
 	})
-	var count = 0;
+	var count = 0;//计数输错的次数
 	$(".date-submit").click(function(){
 		rr_click();
 		var date_value = $(".date-text input").val();		
@@ -119,7 +112,7 @@
 		if(number_last>1){
 			if(date_value == "2017年1月26号"){
 				if(count == 0){
-					//do something;
+					window.location.href="anniversary_timeline.html"
 				}
 			}else{
 				count += 1;
@@ -141,6 +134,27 @@
 		
 	})
 	
-	//跑马灯
-	
-	
+	//game
+	$(".bg-mask1").click(function(){
+		$(this).animate({top:"-200"},2000);
+		//$(this).slideUp()
+	})
+	var count_error = 0;
+	$(".btn_confirm").click(function(){		
+		var index = $(this).parent().parent().index() + 1;
+		var check_value = $(".answer-choice input:radio[name='answer"+ index + "']:checked").val();
+		if(check_value == "true"){
+			$(this).parent().parent().next("li").find(".bg-mask").animate({top:"-200"},2000);
+		}else{
+			count_error += 1; 
+			if(count_error == 1){
+				$(".life-num i").eq(2).removeClass("fa-heart").addClass("fa-heart-o")
+			}else if(count_error == 2){
+				$(".life-num i").eq(1).removeClass("fa-heart").addClass("fa-heart-o")
+			}else if(count_error == 3){
+				$(".life-num i").eq(0).removeClass("fa-heart").addClass("fa-heart-o");
+				$(".mask").show()
+			}
+		}
+		count_error = count_error;
+	})

@@ -8,7 +8,7 @@ $(function(){
 		$(".time-line .time-line-item").each(function(i){
 			$(this).css({
 				<!--translateZ 定义2d旋转沿着z轴-->
-				"transform":"rotateY("+i*deg+"deg) translateZ(300px)"	});
+				"transform":"rotateY("+i*deg+"deg) translateZ(400px)"	});
 				<!--防止图片被拖拽-->
 				$(this).attr('ondragstart','return false');
 			});
