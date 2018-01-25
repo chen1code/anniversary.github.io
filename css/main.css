@@ -25,7 +25,7 @@ img{
 .head-title{
 	width: auto;
 	text-align: center;
-	font-family: "courier new";
+	font-family: cursive;
 }
 .center-block{
 	position: absolute;
@@ -211,7 +211,7 @@ img{
 	background: url(../img/cat_bg.jpg) top center no-repeat;
 }
 .bg-mask2{
-	background: url(../img/cat_bg2.jpg) top center no-repeat;
+	background: url(../img/cat_bg2.jpeg) top center no-repeat;
 }
 .bg-mask3{
 	background: url(../img/cat_bg3.jpg) top center no-repeat;
@@ -247,13 +247,15 @@ img{
 	margin: 40px;
 }
 .game-list ul{
-	display: flex;
+	overflow: hidden;
 }
 .game-list li{
 	position: relative;
-	width: 25%;
-	margin: 10px;
+	width: 20%;
+	min-height: 167px;
+	margin: 10px 2.5%;
 	padding: 10px;
+	float: left;
 	box-shadow: 0 0 15px #ccc;
 	border-radius: 5px;
 	overflow: hidden;
@@ -286,6 +288,11 @@ img{
 	float: right;
 	margin-right: 10px;
 }
+.right_result{
+	display: none;
+	float: right;
+	color: #1b926c;
+}
 /*复活*/
 .mask{
 	position: absolute;
@@ -297,10 +304,21 @@ img{
 	z-index: 3;
 	display: none;
 }
-.mask .panel{
+.mask-panel{
+	position: absolute;
+	top: 50%;
+	left: 50%;
 	width: 300px;
+	height: 200px;
+	z-index: 4;
+	margin-top: -150px;
+	margin-left: -100px;
+	display: none;
+}
+.mask .panel{
+	width: 100%;
 	margin: auto;
-	margin-top: 200px;
+	height: 100%;
 }
 .relife_num{
 	font-size: 20px;	
