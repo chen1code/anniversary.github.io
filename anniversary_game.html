@@ -8,34 +8,104 @@
 		<title>annivesary---game</title>
 		<meta name="keywords" content="divemath">
 		<meta name="description" content="divemath">
-
+		<link rel="shortcut icon" type="image/x-icon" href="img/logo.jpeg">
 		<!--[if lt IE 9]> <meta http-equiv="refresh" content="0;ie.html"/><![endif]-->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/danmu.css" />
 	</head>
-	<style>
-		.game-list{
-			width: 1200px;
-			height: 800px;
-			margin: auto;
-			padding: 20px;
-			position: relative;
-		}
-		.game-item{
-			width: 100px;
-			height: 100px;
-			border:1px solid #ccc;
-		}
-	</style>
 	<body>
 		<div class="wrapper">
+			<div class="life-money">
+				<div class="life-num">
+					<span>生命值：</span>
+					<span><i class="fa fa-heart"></i><i class="fa fa-heart"></i><i class="fa fa-heart"></i></span>
+				</div>
+				<div class="money-num">
+					<span>复活币：</span>
+					<span><span class="left-num">0</span>&nbsp;&nbsp;<i class="fa fa-bitcoin"></i></span>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 			<div class="game-list">
-				<div class="game-item">
-					
+				<ul>
+					<li>
+						<div class="bg-mask bg-mask1"></div>
+						<h4>请问：男朋友生日是什么时候（以农历作答）</h4>
+						<p class="answer-choice">
+							<span><input type="radio" name="answer1" value="wrong"/>1993年1月10号</span>
+							<span><input type="radio" name="answer1" value="wrong"/>1994年1月10号</span>
+							<span><input type="radio" name="answer1" value="true"/>1994年2月19号</span>
+							<span><input type="radio" name="answer1" value="wrong"/>1998年10月23号</span>
+						</p>
+						<p class="answer-help">
+							<button class="btn btn-danger btn_help">帮助</button>
+							<button class="btn btn-danger btn_confirm">确定</button>
+						</p>
+					</li>
+					<li>
+						<div class="bg-mask bg-mask2"></div>
+						<h4>请问：第一次见面时什么时候</h4>
+						<p class="answer-choice">
+							<span><input type="radio" name="answer2" value="wrong"/>2017年1月26号</span>
+							<span><input type="radio" name="answer2" value="true"/>2017年3月24号</span>
+							<span><input type="radio" name="answer2" value="wrong"/>2017年3月26号</span>
+							<span><input type="radio" name="answer2" value="wrong"/>2017年3月23号</span>
+						</p>
+						<p class="answer-help">
+							<button class="btn btn-danger btn_help">帮助</button>
+							<button class="btn btn-danger btn_confirm">确定</button>
+						</p>
+					</li>
+					<li>
+						<div class="bg-mask bg-mask3"></div>
+						<h4>请问：看的第一场电影</h4>
+						<p class="answer-choice">
+							<span><input type="radio" name="answer3" value="true"/>美女与野兽</span>
+							<span><input type="radio" name="answer3" value="wrong"/>喜欢你</span>
+							<span><input type="radio" name="answer3" value="wrong"/>记忆大师</span>
+							<span><input type="radio" name="answer3" value="wrong"/>冰雪奇缘</span>
+						</p>
+						<p class="answer-help">
+							<button class="btn btn-danger btn_help">帮助</button>
+							<button class="btn btn-danger btn_confirm">确定</button>
+						</p>
+					</li>
+					<li>
+						<div class="bg-mask bg-mask3"></div>
+						<h4>请问：看的第一场电影</h4>
+						<p class="answer-choice">
+							<span><input type="radio" name="answer4" value="true"/>美女与野兽</span>
+							<span><input type="radio" name="answer4" value="wrong"/>喜欢你</span>
+							<span><input type="radio" name="answer4" value="wrong"/>记忆大师</span>
+							<span><input type="radio" name="answer4" value="wrong"/>冰雪奇缘</span>
+						</p>
+						<p class="answer-help">
+							<button class="btn btn-danger btn_help">帮助</button>
+							<button class="btn btn-danger btn_confirm">确定</button>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<!--复活-->
+			<div class="mask">
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						温馨提示
+					</div>
+					<div class="panel-body">
+						<p class="relife_num">当前可用复活币：<span class="red">0</span><i class="fa fa-bitcoin"></i></p>
+						<span class="relife_warn"><i class="fa fa-warning"></i>每次复活需要<span class="red">5</span>枚复活币</span><br>
+						<span class="relife_warn">请先<span class="pay-coin red">充值</span>复活币</span>
+					</div>
+					<div class="panel-footer">
+						<button class="btn btn-danger btn-block">复活</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/main.js" ></script>
 </html>
