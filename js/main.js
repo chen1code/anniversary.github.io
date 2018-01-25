@@ -74,10 +74,10 @@
 	window.onload = function(){
 		var height = window.innerHeight;
 		$(".wrapper").css("height",height)
-//		setTimeout(function(){
-//			time_i = 0;
-//			init_callbak(time_i)
-//		},1000)//等待触发
+		setTimeout(function(){
+			time_i = 0;
+			init_callbak(time_i)
+		},5000)//等待触发
 	}
 	function init_callbak(time_i)
 	{
@@ -158,3 +158,4 @@
 		}
 		count_error = count_error;
 	})
+	
